@@ -1,0 +1,238 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fc;
+    color: #222;
+}
+
+/* Навигация */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: white;
+}
+
+.navbar h2 {
+    font-size: 22px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #4169e1;
+}
+
+/* Главная страница */
+
+.hero {
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.welcome {
+    color: #4169e1;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #4169e1;
+}
+
+.description {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #4169e1;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2548b8;
+    transform: translateY(-3px);
+}
+
+/* Разделы */
+
+.about, .education {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.about h2, .education h2 {
+    margin-bottom: 20px;
+}
+
+/* Подвал */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+/* Карточка профиля */
+
+.profile-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 30px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+}
+
+/* Фотография */
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e8edff;
+    margin-bottom: 25px;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .profile-card {
+        padding: 30px 20px;
+    }
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.bio-item {
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.bio-item:hover {
+    transform: translateY(-5px);
+    background: #eef2ff;
+}
+
+.bio-item h3 {
+    color: #4169e1;
+    margin-bottom: 12px;
+}
+
+.bio-item p {
+    line-height: 1.7;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .bio-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.achievements {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.achievement-card {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.achievement-card h3 {
+    color: #4169e1;
+    margin-bottom: 10px;
+}
+.dark {
+    background: #151515;
+    color: white;
+}
+
+.dark .navbar,
+.dark .profile-card,
+.dark .about,
+.dark .education,
+.dark .achievement-card {
+    background: #242424;
+    color: white;
+}
+
+.dark .bio-item {
+    background: #303030;
+}
+
+.dark .bio-item p {
+    color: #ddd;
+}
